@@ -1,0 +1,9 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Get List of Users for game name",
+	"type": "object",
+	"properties": {
+		"gameName": {"$ref": "GameName.json"}
+	},
+	"required" : [ "gameName" ]
+}
