@@ -17,6 +17,10 @@ public class StarterApplication extends SpringBootServletInitializer{
 //	@Autowired
 //	UserRepository repo;
 
+
+
+// Adding some text for VS
+
 	public static void main(String[] args) {
 		SpringApplication.run(StarterApplication.class, args);
 	}
