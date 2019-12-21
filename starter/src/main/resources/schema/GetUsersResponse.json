@@ -1,0 +1,29 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Get List of Users for game name",
+	"type": "object",
+	"properties": {
+		"firstName": {
+			"description": "First Name",
+			"type": "string"
+        },
+        "lastName": {
+            "description": "Last Name",
+            "type": "string"
+        }
+        ,
+        "city": {
+            "description": "City",
+            "type": "string"
+        },
+        "state": {
+            "description": "State",
+            "type": "string"
+        },
+        "gameName": {
+            "description": "Game Name",
+            "type": "string"
+        }
+	},
+	"required" : [ "firstName", "lastName", "city", "state" ]
+}
