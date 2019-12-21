@@ -75,6 +75,7 @@
     				<configuration>
         				<sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
         				<targetPackage>com.mongo.model</targetPackage>
+						<useCommonsLang3>true</useCommonsLang3>
     				</configuration>
     				<executions>
         				<execution>
