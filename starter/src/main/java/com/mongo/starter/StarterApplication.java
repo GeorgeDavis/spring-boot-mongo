@@ -13,9 +13,6 @@ import com.mongo.repositories.UserRepository;
 @SpringBootApplication(scanBasePackages = {"com.mongo.*"})
 @EnableMongoRepositories(basePackageClasses = UserRepository.class)
 public class StarterApplication extends SpringBootServletInitializer{
-	
-//	@Autowired
-//	UserRepository repo;
 
 	public static void main(String[] args) {
 		SpringApplication.run(StarterApplication.class, args);
@@ -28,11 +25,6 @@ public class StarterApplication extends SpringBootServletInitializer{
 //		listAll();
 //		findFirst();
 //		
-//	}
-//	
-//	public void deleteAll() {
-//		System.out.println("Deleting all records...");
-//		repo.deleteAll();
 //	}
 //	
 //	public void addSampleData() {
