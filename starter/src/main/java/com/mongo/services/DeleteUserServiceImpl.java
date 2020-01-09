@@ -2,7 +2,7 @@ package com.mongo.services;
 
 import com.mongo.model.DeleteUserRequest;
 import com.mongo.model.DeleteUserResponse;
-import com.mongo.model.User;
+import com.mongo.collections.User;
 import com.mongo.repositories.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
