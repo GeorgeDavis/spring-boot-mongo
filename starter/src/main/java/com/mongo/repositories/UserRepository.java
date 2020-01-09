@@ -1,11 +1,10 @@
 package com.mongo.repositories;
 
-import java.util.List;
-
-import com.mongo.model.User;
-
+import com.mongo.collections.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
+
+import java.util.List;
 
 public interface UserRepository extends MongoRepository<User, String> {
 
@@ -20,5 +19,7 @@ public interface UserRepository extends MongoRepository<User, String> {
     List<User> findCustomByRegExGameName(String domain);
 
     User findFirstByGameName(String gameName);
+
+    List<User> getUsersByGameName(String gameName);
 
 }

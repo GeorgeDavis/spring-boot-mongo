@@ -3,7 +3,7 @@ package com.mongo.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mongo.model.User;
+import com.mongo.collections.User;
 import com.mongo.repositories.UserRepository;
 
 @Service

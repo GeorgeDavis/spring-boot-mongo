@@ -1,6 +1,6 @@
 package com.mongo.services;
 
-import com.mongo.model.User;
+import com.mongo.collections.User;
 
 public interface SetUserService {
 	
