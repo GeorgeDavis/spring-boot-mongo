@@ -7,7 +7,7 @@
       "type": "array",
       "id": "statusMessages",
       "items": {
-        "$ref": "common/statusMessages.json"
+        "$ref": "../common/statusMessages.json"
       }
     }
   }
