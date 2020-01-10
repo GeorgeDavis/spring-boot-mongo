@@ -1,9 +1,11 @@
 package com.mongo.services;
 
-import com.mongo.collections.User;
+import com.mongo.model.CreateUserRequest;
+import com.mongo.model.CreateUserResponse;
+import org.springframework.http.ResponseEntity;
 
 public interface SetUserService {
 	
-	public User saveUser(User user);
+	 ResponseEntity<CreateUserResponse> saveUser(CreateUserRequest request);
 
 }

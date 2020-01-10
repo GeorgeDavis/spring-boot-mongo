@@ -1,10 +1,6 @@
 package com.mongo.controllers;
 
-import com.mongo.collections.User;
-import com.mongo.model.DeleteUserRequest;
-import com.mongo.model.DeleteUserResponse;
-import com.mongo.model.GetUsersRequest;
-import com.mongo.model.GetUsersResponse;
+import com.mongo.model.*;
 import com.mongo.services.DeleteUserService;
 import com.mongo.services.GetUsersService;
 import com.mongo.services.SetUserService;
@@ -36,20 +32,18 @@ public class GetUsersController {
 		return "Hello world";
 	}
 
-	// add user
-	@PostMapping(value = "/api/mongo/addUser")
-	public void addUser(@RequestBody User user) {
-		User savedUser = setUserService.saveUser(user);
+	@PostMapping(value = "/api/mongo/createUser")
+	public ResponseEntity<CreateUserResponse> createUser(@RequestBody CreateUserRequest request) {
+
+		return setUserService.saveUser(request);
 	}
 
-	// get users
-	@GetMapping("/api/mongo/getUsers")
+	@PostMapping("/api/mongo/getUsers")
 	public ResponseEntity<GetUsersResponse> getUsers(@Valid @RequestBody GetUsersRequest request) {
 
 		return getUserService.getUsers(request);
 	}
 
-	// delete user
 	@DeleteMapping("api/mongo/deleteUser")
 	public ResponseEntity<DeleteUserResponse> deleteUser(@Valid @RequestBody DeleteUserRequest request) {
 
