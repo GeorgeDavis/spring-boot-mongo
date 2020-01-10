@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "firstName": {"type": "string"},
+    "lastName": {"type": "string"},
+    "street_address": {"type": "string"},
+    "city": {"type": "string"},
+    "state": {"type": "string"},
+    "gameName": {"type": "string"}
+  },
+  "required": ["lastName", "firstName", "gameName"]
+}
