@@ -6,7 +6,7 @@
       "description": "List of Users Who Play a Game",
       "type": "array",
       "items": {
-        "$ref": "userResponse.json"
+        "$ref": "../entity/userResponse.json"
       }
     }
   }
