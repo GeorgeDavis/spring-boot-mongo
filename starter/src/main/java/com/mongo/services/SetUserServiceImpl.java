@@ -1,9 +1,9 @@
 package com.mongo.services;
 
 import com.mongo.collections.User;
-import com.mongo.model.CreateUserRequest;
-import com.mongo.model.CreateUserResponse;
 import com.mongo.model.common.StatusMessages;
+import com.mongo.model.set.SetUserRequest;
+import com.mongo.model.set.SetUserResponse;
 import com.mongo.repositories.UserRepository;
 import com.mongo.utility.BasicCommonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +20,9 @@ public class SetUserServiceImpl implements SetUserService {
 	private UserRepository userRepo;
 
 	@Override
-	public ResponseEntity<CreateUserResponse> saveUser(CreateUserRequest request) {
+	public ResponseEntity<SetUserResponse> saveUser(SetUserRequest request) {
 
-		CreateUserResponse response = new CreateUserResponse();
+		SetUserResponse response = new SetUserResponse();
 		userRepo.save(new User(request.getFirstName(), request.getLastName(), request.getStreetAddress(),
 				request.getCity(), request.getState(), request.getGameName()));
 		List<StatusMessages> statusMessagesList =  BasicCommonUtil.processStatusMessages("Success", "Data Updated", "User was saved.");
