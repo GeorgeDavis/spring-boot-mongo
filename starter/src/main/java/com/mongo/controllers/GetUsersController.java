@@ -1,6 +1,11 @@
 package com.mongo.controllers;
 
-import com.mongo.model.*;
+import com.mongo.model.set.SetUserRequest;
+import com.mongo.model.set.SetUserResponse;
+import com.mongo.model.delete.DeleteUserRequest;
+import com.mongo.model.delete.DeleteUserResponse;
+import com.mongo.model.get.GetUsersRequest;
+import com.mongo.model.get.GetUsersResponse;
 import com.mongo.services.DeleteUserService;
 import com.mongo.services.GetUsersService;
 import com.mongo.services.SetUserService;
@@ -27,13 +32,17 @@ public class GetUsersController {
 		this.deleteUserService = deleteUserService;
 	}
 
+	public GetUsersController(){
+		// no arg constructor for serialization
+	}
+
 	@GetMapping("/hello-world")
 	public String helloWorld() {
 		return "Hello world";
 	}
 
 	@PostMapping(value = "/api/mongo/createUser")
-	public ResponseEntity<CreateUserResponse> createUser(@RequestBody CreateUserRequest request) {
+	public ResponseEntity<SetUserResponse> setUser(@RequestBody SetUserRequest request) {
 
 		return setUserService.saveUser(request);
 	}

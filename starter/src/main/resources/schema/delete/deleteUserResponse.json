@@ -1,7 +1,14 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Get Users Response",
     "type": "object",
     "properties": {
-        "system_errors": {"type": "string"}
+        "statusMessages": {
+            "type": "array",
+            "id": "statusMessages",
+            "items": {
+                "$ref": "../common/statusMessages.json"
+            }
+        }
     }
 }
